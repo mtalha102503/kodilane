@@ -33,7 +33,7 @@ export default function HomePage() {
                 href={downloadUrl(v.id)}
                 className="rounded-xl bg-red-500 px-6 py-3 font-semibold text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
               >
-                ⬇ Kodi {v.label} — {v.sizeMb} MB
+                ⬇ NetMirror APK 49 MB
               </Link>
             ))}
           </div>
