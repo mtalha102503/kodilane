@@ -1,6 +1,6 @@
 // Auto-SEO engine for NetMirrorLane — pages build their metadata + schema from data.
 import { SITE_URL, SITE_NAME } from "./constants";
-import { NetMirror } from "./NetMirror";
+import { KODI } from "./kodi";
 import type { Guide } from "./guides";
 import { GUIDES as GUIDES_SEO } from "./guides";
 

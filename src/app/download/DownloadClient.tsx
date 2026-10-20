@@ -2,8 +2,8 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { Kodi, NetMirror_VARIANTS } from "@/lib/Kodi";
-import { Kodi_OFFICIAL_DOWNLOAD } from "@/lib/constants";
+import { KODI, KODI_VARIANTS } from "@/lib/Kodi";
+import { KODI_OFFICIAL_DOWNLOAD } from "@/lib/constants";
 
 const COUNTDOWN = 5; // seconds before the download starts
 

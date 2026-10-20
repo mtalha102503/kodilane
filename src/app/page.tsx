@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Kodi, Kodi_VARIANTS, downloadUrl } from "@/lib/Kodi";
+import { KODI, KODI_VARIANTS, downloadUrl } from "@/lib/Kodi";
 import { GUIDES } from "@/lib/guides";
 import { KodiFaqs, softwareSchema, faqSchema } from "@/lib/seo";
 

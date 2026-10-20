@@ -103,17 +103,10 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
-<<<<<<< HEAD
       <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-6 text-center">
         <p className="font-semibold text-white">Ready to set up NetMirror?</p>
         <Link href="/download" className="mt-3 inline-block rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white hover:bg-sky-400">
           ⬇ Download NetMirror APK
-=======
-      <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 text-center">
-        <p className="font-semibold text-slate-900">Ready to set up Kodi?</p>
-        <Link href="/download" className="mt-3 inline-block rounded-xl bg-red-500 px-6 py-3 font-semibold text-white hover:bg-red-400">
-          ⬇ Download Kodi APK
->>>>>>> 57e26861544210bb3e8b61f39bd44d1cfb6ad6ab
         </Link>
       </div>
     </article>
