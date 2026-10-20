@@ -2,6 +2,7 @@
 import { SITE_URL, SITE_NAME } from "./constants";
 import { KODI } from "./kodi";
 import type { Guide } from "./guides";
+import { GUIDES as GUIDES_SEO } from "./guides";
 
 export function downloadTitle(): string {
   return `Kodi APK Download (v${KODI.version} ${KODI.codename}) — Latest Version | ${SITE_NAME}`;
@@ -76,5 +77,69 @@ export function guideSchema(guide: Guide) {
     author: { "@type": "Organization", name: SITE_NAME },
     publisher: { "@type": "Organization", name: SITE_NAME },
     mainEntityOfPage: `${SITE_URL}/guides/${guide.slug}`,
+  };
+}
+
+export function websiteSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE_NAME,
+    url: SITE_URL,
+    description:
+      "Download the official Kodi APK and follow step-by-step install guides for Firestick, Android and Android TV. Legal addons only.",
+    publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+  };
+}
+
+export function organizationSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/icon.svg`,
+  };
+}
+
+export function breadcrumbSchema(items: { name: string; url: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
+  };
+}
+
+export function guidesItemListSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Kodi Guides",
+    itemListElement: GUIDES_SEO.map((g, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: g.title,
+      url: `${SITE_URL}/guides/${g.slug}`,
+    })),
+  };
+}
+
+
+export function howToSchema(guide: Guide) {
+  const steps = guide.sections.flatMap((s) =>
+    (s.steps ?? []).map((text) => ({ "@type": "HowToStep", name: text.slice(0, 110), text }))
+  );
+  if (steps.length === 0) return null;
+  return {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: guide.title,
+    description: guide.metaDescription,
+    step: steps,
   };
 }

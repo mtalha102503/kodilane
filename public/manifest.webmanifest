@@ -1,0 +1,12 @@
+{
+  "name": "KodiLane — Kodi APK Download & Guides",
+  "short_name": "KodiLane",
+  "description": "Download the official Kodi APK for Android, Firestick and Android TV, with install guides and legal addons.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#dc2626",
+  "icons": [
+    { "src": "/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}

@@ -16,6 +16,21 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     type: "website",
     url: SITE_URL,
+    title: `${SITE_NAME} — Kodi APK Download, Install Guides & Legal Addons`,
+    description:
+      "Download the official Kodi APK (latest version), install it on Firestick, Android and Android TV with step-by-step guides, and discover the best legal addons.",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_NAME} — Kodi APK Download & Guides`,
+    description:
+      "Official Kodi APK for Android, Firestick & TV — with install guides and legal addons only.",
+  },
+  manifest: "/manifest.webmanifest",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
 };
 

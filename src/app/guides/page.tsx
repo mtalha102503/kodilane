@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GUIDES } from "@/lib/guides";
+import { guidesItemListSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Kodi Guides — Install on Firestick, Android & TV, Addons & Fixes",
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
 export default function GuidesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesItemListSchema()) }} />
       <h1 className="text-3xl font-extrabold text-slate-900">Kodi Guides</h1>
       <p className="mt-2 max-w-2xl text-slate-500">
         Honest, step-by-step help for installing Kodi and getting the most out of it — official app and legal addons only.

@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Terms of Service | KodiLane",
+  description: "KodiLane terms of service: using our Kodi APK downloads and guides, the GPL license, prohibited uses and liability. Read before downloading.",
   alternates: { canonical: `${SITE_URL}/terms` },
 };
 

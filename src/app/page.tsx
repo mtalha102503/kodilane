@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { KODI, KODI_VARIANTS, downloadUrl } from "@/lib/kodi";
 import { GUIDES } from "@/lib/guides";
-import { kodiFaqs, softwareSchema, faqSchema } from "@/lib/seo";
+import { kodiFaqs, softwareSchema, faqSchema, websiteSchema, organizationSchema } from "@/lib/seo";
 
 
 export default function HomePage() {
@@ -9,6 +9,8 @@ export default function HomePage() {
   return (
     <div>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
       {/* HERO */}

@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "DMCA Policy | KodiLane",
+  description: "KodiLane DMCA policy: how to file a copyright takedown notice, what to include, and our counter-notice process.",
   alternates: { canonical: `${SITE_URL}/dmca` },
 };
 

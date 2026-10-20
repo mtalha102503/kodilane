@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title: "Privacy Policy | KodiLane",
+  description: "How KodiLane handles your data: what we collect (almost nothing), what we never collect, cookies, and your rights. Read the KodiLane privacy policy.",
   alternates: { canonical: `${SITE_URL}/privacy` },
 };
 
