@@ -7,6 +7,7 @@ export const KODI = {
   tagline: "The free, open-source media center",
   developer: "XBMC Foundation",
   license: "GPL (open source)",
+  minAndroid: "5.0",
   updated: "December 2025",
 };
 
@@ -14,11 +15,10 @@ export interface KodiVariant {
   id: string;
   label: string;
   platform: "Android" | "Windows";
-  arch: string;
   fileName: string;
-  sizeBytes: number;
-  size: string;
-  blurb: string;
+  sizeMb: number;
+  bestFor: string;
+  r2Url: string;
 }
 
 export const KODI_VARIANTS: KodiVariant[] = [
@@ -26,31 +26,28 @@ export const KODI_VARIANTS: KodiVariant[] = [
     id: "android-64",
     label: "Android 64-bit",
     platform: "Android",
-    arch: "ARM64 (arm64-v8a)",
     fileName: "kodi-21.3-Omega-arm64-v8a.apk",
-    sizeBytes: 68167494,
-    size: "65.0 MB",
-    blurb: "For most modern Android phones and tablets (2018 or newer). This is the one most people need.",
+    sizeMb: 65.0,
+    bestFor: "Most modern Android phones and tablets (2018 or newer) — this is the one most people need.",
+    r2Url: `${R2_PUBLIC_URL}/kodi-21.3-Omega-arm64-v8a.apk`,
   },
   {
     id: "android-32",
     label: "Android 32-bit",
     platform: "Android",
-    arch: "ARM (armeabi-v7a)",
     fileName: "kodi-21.3-Omega-armeabi-v7a.apk",
-    sizeBytes: 67832726,
-    size: "64.7 MB",
-    blurb: "For older Android phones, tablets and budget devices with a 32-bit processor.",
+    sizeMb: 64.7,
+    bestFor: "Older Android phones, tablets and budget devices with a 32-bit processor.",
+    r2Url: `${R2_PUBLIC_URL}/kodi-21.3-Omega-armeabi-v7a.apk`,
   },
   {
     id: "windows-64",
     label: "Windows 64-bit",
     platform: "Windows",
-    arch: "Windows 10 / 11 (64-bit PC)",
     fileName: "kodi-21.3-Omega-x64.exe",
-    sizeBytes: 77567958,
-    size: "74.0 MB",
-    blurb: "For Windows PCs and laptops — the standard .exe installer from the official Kodi mirrors.",
+    sizeMb: 74.0,
+    bestFor: "Windows 10 and 11 PCs and laptops — the standard .exe installer from the official Kodi mirrors.",
+    r2Url: `${R2_PUBLIC_URL}/kodi-21.3-Omega-x64.exe`,
   },
 ];
 
@@ -60,8 +57,4 @@ export function variantById(id: string | null | undefined): KodiVariant {
 
 export function downloadUrl(id: string): string {
   return `/download?build=${id}`;
-}
-
-export function apkUrl(variant: KodiVariant): string {
-  return `${R2_PUBLIC_URL}/${variant.fileName}`;
 }

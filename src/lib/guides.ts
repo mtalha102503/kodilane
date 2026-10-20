@@ -62,9 +62,9 @@ export const GUIDES: Guide[] = [
     title: "How to Install Kodi on Windows 10 & 11 (Step-by-Step)",
     metaDescription:
       "Install Kodi 21.3 on Windows 10 or 11 in minutes: download the official .exe installer, run the setup wizard, handle the SmartScreen prompt, and set up legal addons.",
-    excerpt:
+    intro:
       "The full Windows walkthrough: official .exe installer, setup wizard, the SmartScreen prompt explained, first-run setup and updating — no Microsoft Store needed.",
-    readTime: "5 min read",
+    readMinutes: 5,
     updated: "October 2026",
     sections: [
       {
@@ -102,11 +102,14 @@ export const GUIDES: Guide[] = [
           "Before a big version jump (for example 21.x to 22.x), a quick backup of the %APPDATA%\Kodi folder is cheap insurance.",
         ],
       },
-    ],
-    tips: [
-      "SmartScreen's 'Run anyway' is normal for Kodi's installer — but only trust the file if its name and size match the official release.",
-      "Keyboard shortcut: press \\ during playback to toggle fullscreen/windowed mode.",
-      "If Kodi feels slow on an old laptop, lower the GUI resolution in Settings → System → Display — the interface renders much lighter.",
+      {
+        heading: "Pro tips for Windows users",
+        paragraphs: [
+          "SmartScreen's 'Run anyway' is normal for Kodi's installer — but only trust the file if its name and size match the official release.",
+          "Press the backslash key during playback to toggle between fullscreen and windowed mode.",
+          "If Kodi feels slow on an old laptop, lower the GUI resolution in Settings → System → Display — the interface renders much lighter.",
+        ],
+      },
     ],
     faqs: [
       {
