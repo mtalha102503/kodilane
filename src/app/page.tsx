@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { KODI, KODI_VARIANTS, downloadUrl } from "@/lib/Kodi";
+import { KODI, KODI_VARIANTS, downloadUrl } from "@/lib/kodi";
 import { GUIDES } from "@/lib/guides";
-import { KodiFaqs, softwareSchema, faqSchema } from "@/lib/seo";
+import { kodiFaqs, softwareSchema, faqSchema, websiteSchema, organizationSchema } from "@/lib/seo";
 
 
 export default function HomePage() {
