@@ -20,20 +20,20 @@ export default function HomePage() {
             Latest stable release — v{KODI.version} “{KODI.codename}”
           </p>
           <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-            Download NetMirror APK for Android, Firestick &amp; TV
+            Download Kodi APK for Android, Firestick &amp; TV
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
-            The official, unmodified NetMirror APK — free and open-source by the XBMC Foundation.
+            The official, unmodified Kodi APK — free and open-source by the XBMC Foundation.
             Pick your build, follow a 5-minute guide, done.
           </p>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+          <div className="mt-8 flex flex-col items-stretch justify-center gap-3 px-2 sm:flex-row sm:flex-wrap sm:items-center sm:px-0">
             {KODI_VARIANTS.map((v) => (
               <Link
                 key={v.id}
                 href={downloadUrl(v.id)}
-                className="rounded-xl bg-red-500 px-6 py-3 font-semibold text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
+                className="rounded-xl bg-red-600 px-6 py-3.5 text-center font-semibold text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
               >
-                ⬇ NetMirror APK 49 MB
+                ⬇ Kodi {v.label} — {v.sizeMb} MB
               </Link>
             ))}
           </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
 
       {/* WHICH BUILD */}
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="text-2xl font-bold text-slate-900">Which NetMirror build do you need?</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Which Kodi build do you need?</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {KODI_VARIANTS.map((v) => (
             <div key={v.id} className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -95,7 +95,7 @@ export default function HomePage() {
 
       {/* WHY KODILANE */}
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="text-2xl font-bold text-slate-900">Why download NetMirror from NetMirrorLane?</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Why download Kodi from KodiLane?</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-white p-6">
             <p className="text-3xl">🛡️</p>
@@ -109,7 +109,7 @@ export default function HomePage() {
             <p className="text-3xl">⚖️</p>
             <h3 className="mt-2 font-semibold text-slate-900">Legal addons only</h3>
             <p className="mt-1 text-sm text-slate-500">
-              We cover addons from the official NetMirror repository — YouTube, Twitch, Pluto TV, Plex. No pirated sources,
+              We cover addons from the official Kodi repository — YouTube, Twitch, Pluto TV, Plex. No pirated sources,
               no risky third-party builds.
             </p>
           </div>
@@ -126,7 +126,7 @@ export default function HomePage() {
 
       {/* FAQ */}
       <section className="mx-auto max-w-4xl px-4 pb-16">
-        <h2 className="text-2xl font-bold text-slate-900">NetMirror APK — frequently asked questions</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Kodi APK — frequently asked questions</h2>
         <div className="mt-6 space-y-3">
           {faqs.map((f) => (
             <details key={f.q} className="rounded-xl border border-slate-200 bg-white p-5">
