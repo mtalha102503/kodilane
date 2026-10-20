@@ -2,23 +2,23 @@
 import { useEffect, useRef, useState } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { KODI, KODI_VARIANTS } from "@/lib/Kodi";
+import { KODI, KODI_VARIANTS } from "@/lib/kodi";
 import { KODI_OFFICIAL_DOWNLOAD } from "@/lib/constants";
 
 const COUNTDOWN = 5; // seconds before the download starts
 
 export default function DownloadClient() {
   const params = useSearchParams();
-  const initial = NetMirror_VARIANTS.some((v) => v.id === params.get("variant"))
+  const initial = KODI_VARIANTS.some((v) => v.id === params.get("variant"))
     ? (params.get("variant") as string)
-    : NetMirror_VARIANTS[0].id;
+    : KODI_VARIANTS[0].id;
 
   const [variantId, setVariantId] = useState(initial);
   const [seconds, setSeconds] = useState(COUNTDOWN);
   const [started, setStarted] = useState(false);
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
 
-  const variant = NetMirror_VARIANTS.find((v) => v.id === variantId) ?? NetMirror_VARIANTS[0];
+  const variant = KODI_VARIANTS.find((v) => v.id === variantId) ?? KODI_VARIANTS[0];
 
   const beginDownload = () => {
     // NOTE: ad popunder code (Adsterra) goes here when the account is ready.
@@ -52,16 +52,16 @@ export default function DownloadClient() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-14">
-      <h1 className="text-center text-3xl font-extrabold text-white">
-        Download NetMirror {NetMirror.version} “{NetMirror.codename}” APK
+      <h1 className="text-center text-3xl font-extrabold text-slate-900">
+        Download NetMirror {KODI.version} “{KODI.codename}” APK
       </h1>
-      <p className="mt-2 text-center text-slate-400">
-        Official release by the {NetMirror.developer} · {NetMirror.license} · Android {NetMirror.minAndroid}+
+      <p className="mt-2 text-center text-slate-500">
+        Official release by the {KODI.developer} · {KODI.license} · Android {KODI.minAndroid}+
       </p>
 
       {/* Variant picker */}
       <div className="mt-8 grid gap-3 sm:grid-cols-2">
-        {NetMirror_VARIANTS.map((v) => (
+        {KODI_VARIANTS.map((v) => (
           <button
             key={v.id}
             onClick={() => setVariantId(v.id)}
@@ -111,27 +111,27 @@ export default function DownloadClient() {
         <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
           <li>
             Firestick / Fire TV —{" "}
-            <Link href="/guides/install-NetMirror-on-firestick" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-firestick" className="text-red-600 hover:underline">
               step-by-step Firestick guide
             </Link>
           </li>
           <li>
             Android phone or tablet —{" "}
-            <Link href="/guides/install-NetMirror-on-android" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android" className="text-red-600 hover:underline">
               Android install guide
             </Link>
           </li>
           <li>
             Android TV / Google TV / Shield —{" "}
-            <Link href="/guides/install-NetMirror-on-android-tv" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android-tv" className="text-red-600 hover:underline">
               Android TV guide
             </Link>
           </li>
         </ul>
         <p className="mt-4 text-sm text-slate-500">
           Prefer the source? The same file is available from the{" "}
-          <a href={NetMirror_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
-            official NetMirror website
+          <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">
+            official Kodi website
           </a>
           .
         </p>

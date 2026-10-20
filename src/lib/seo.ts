@@ -1,18 +1,18 @@
-// Auto-SEO engine for NetMirrorLane — pages build their metadata + schema from data.
+// Auto-SEO engine for KodiLane — pages build their metadata + schema from data.
 import { SITE_URL, SITE_NAME } from "./constants";
 import { KODI } from "./kodi";
 import type { Guide } from "./guides";
 import { GUIDES as GUIDES_SEO } from "./guides";
 
 export function downloadTitle(): string {
-  return `NetMirror APK Download (v${NetMirror.version} ${NetMirror.codename}) — Latest Version | ${SITE_NAME}`;
+  return `Kodi APK Download (v${KODI.version} ${KODI.codename}) — Latest Version | ${SITE_NAME}`;
 }
 
 export function downloadMeta(): string {
-  return `Download NetMirror APK v${NetMirror.version} ${NetMirror.codename} for Android, Firestick & Android TV — official, free and open-source. 32-bit and 64-bit builds, safe direct download.`;
+  return `Download Kodi APK v${KODI.version} ${KODI.codename} for Android, Firestick & Android TV — official, free and open-source. 32-bit and 64-bit builds, safe direct download.`;
 }
 
-export function NetMirrorFaqs(): { q: string; a: string }[] {
+export function kodiFaqs(): { q: string; a: string }[] {
   return [
     {
       q: "Is NetMirror free?",
@@ -24,7 +24,7 @@ export function NetMirrorFaqs(): { q: string; a: string }[] {
     },
     {
       q: `What is the latest version of NetMirror?`,
-      a: `The latest stable version is NetMirror ${NetMirror.version} "${NetMirror.codename}". A newer NetMirror 22 "Piers" release is still in testing (release-candidate stage).`,
+      a: `The latest stable version is NetMirror ${KODI.version} "${KODI.codename}". A newer NetMirror 22 "Piers" release is still in testing (release-candidate stage).`,
     },
     {
       q: "Should I download the 32-bit or 64-bit NetMirror APK?",
@@ -32,7 +32,7 @@ export function NetMirrorFaqs(): { q: string; a: string }[] {
     },
     {
       q: "Is the NetMirror APK on NetMirrorLane the official file?",
-      a: "Yes. NetMirrorLane hosts the unmodified official release published by the XBMC Foundation on the NetMirror mirrors — no mods, no bundled extras.",
+      a: "Yes. KodiLane hosts the unmodified official release published by the XBMC Foundation on the NetMirror mirrors — no mods, no bundled extras.",
     },
     {
       q: "Does NetMirror work on Firestick?",
@@ -45,10 +45,10 @@ export function softwareSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "NetMirror",
+    name: "Kodi",
     operatingSystem: "Android",
     applicationCategory: "MultimediaApplication",
-    softwareVersion: NetMirror.version,
+    softwareVersion: KODI.version,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     aggregateRating: undefined,
     author: { "@type": "Organization", name: "XBMC Foundation" },
@@ -87,7 +87,7 @@ export function websiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Download the official Kodi APK and follow step-by-step install guides for Firestick, Android and Android TV. Legal addons only.",
+      "Download the official NetMirror APK and follow step-by-step install guides for Firestick, Android and Android TV. Legal addons only.",
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
   };
 }
@@ -119,7 +119,7 @@ export function guidesItemListSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "Kodi Guides",
+    name: "NetMirror Guides",
     itemListElement: GUIDES_SEO.map((g, i) => ({
       "@type": "ListItem",
       position: i + 1,
