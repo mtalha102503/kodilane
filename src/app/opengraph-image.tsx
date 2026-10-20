@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "KodiLane — Download Kodi APK for Android, Firestick & TV";
+export const alt = "NetMirrorLane — Download NetMirror APK for Android, Firestick & TV";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -36,13 +36,13 @@ export default function OpenGraphImage() {
             K
           </div>
           <div style={{ display: "flex", marginLeft: "24px", fontSize: "44px", fontWeight: 800, color: "#0f172a" }}>
-            Kodi<span style={{ color: "#dc2626" }}>Lane</span>
+            NetMirror<span style={{ color: "#dc2626" }}>Lane</span>
           </div>
         </div>
 
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ display: "flex", fontSize: "62px", fontWeight: 900, color: "#0f172a", lineHeight: 1.1 }}>
-            Download Kodi APK
+            Download NetMirror APK
           </div>
           <div style={{ display: "flex", fontSize: "34px", color: "#475569", marginTop: "16px" }}>
             For Android, Firestick &amp; Android TV — official, free &amp; open-source
@@ -61,7 +61,7 @@ export default function OpenGraphImage() {
               borderRadius: "12px",
             }}
           >
-            Latest: Kodi 21.3 “Omega”
+            Latest: NetMirror 21.3 “Omega”
           </div>
           <div style={{ display: "flex", marginLeft: "24px", fontSize: "24px", color: "#64748b" }}>
             Install guides · Legal addons · No mods
