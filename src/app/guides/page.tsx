@@ -21,9 +21,9 @@ export default function GuidesPage() {
           <Link
             key={g.slug}
             href={`/guides/${g.slug}`}
-            className="group rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-sky-500/50"
+            className="group rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-red-500/50"
           >
-            <h2 className="font-semibold leading-snug text-white group-hover:text-sky-300">{g.title}</h2>
+            <h2 className="font-semibold leading-snug text-white group-hover:text-red-300">{g.title}</h2>
             <p className="mt-2 line-clamp-3 text-sm text-slate-400">{g.intro}</p>
             <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-500">
               {g.readMinutes} min read · Updated {g.updated}

@@ -67,7 +67,7 @@ export default function DownloadClient() {
             onClick={() => setVariantId(v.id)}
             className={`rounded-2xl border p-5 text-left transition ${
               v.id === variantId
-                ? "border-sky-400 bg-sky-950/40"
+                ? "border-red-400 bg-red-950/40"
                 : "border-slate-800 bg-slate-900 hover:border-slate-600"
             }`}
           >
@@ -87,7 +87,7 @@ export default function DownloadClient() {
             <p className="text-slate-300">
               Your download of <span className="font-semibold text-white">{variant.fileName}</span> starts in
             </p>
-            <p className="my-4 text-6xl font-extrabold text-sky-400">{seconds}</p>
+            <p className="my-4 text-6xl font-extrabold text-red-400">{seconds}</p>
             <p className="text-sm text-slate-500">Please wait — do not close this page.</p>
             {/* AD SPOT: Adsterra banner mounts here */}
           </>
@@ -97,7 +97,7 @@ export default function DownloadClient() {
             <p className="mt-2 font-semibold text-white">Download started!</p>
             <p className="mt-1 text-sm text-slate-400">
               Didn’t start?{" "}
-              <button onClick={beginDownload} className="font-medium text-sky-400 underline">
+              <button onClick={beginDownload} className="font-medium text-red-400 underline">
                 Click here to retry
               </button>
             </p>
@@ -111,26 +111,26 @@ export default function DownloadClient() {
         <ul className="mt-2 list-inside list-disc space-y-1 text-slate-300">
           <li>
             Firestick / Fire TV —{" "}
-            <Link href="/guides/install-kodi-on-firestick" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-firestick" className="text-red-400 hover:underline">
               step-by-step Firestick guide
             </Link>
           </li>
           <li>
             Android phone or tablet —{" "}
-            <Link href="/guides/install-kodi-on-android" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android" className="text-red-400 hover:underline">
               Android install guide
             </Link>
           </li>
           <li>
             Android TV / Google TV / Shield —{" "}
-            <Link href="/guides/install-kodi-on-android-tv" className="text-sky-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android-tv" className="text-red-400 hover:underline">
               Android TV guide
             </Link>
           </li>
         </ul>
         <p className="mt-4 text-sm text-slate-500">
           Prefer the source? The same file is available from the{" "}
-          <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
+          <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">
             official Kodi website
           </a>
           .

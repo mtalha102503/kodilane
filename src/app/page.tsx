@@ -12,9 +12,9 @@ export default function HomePage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(faqs)) }} />
 
       {/* HERO */}
-      <section className="border-b border-slate-800 bg-gradient-to-b from-sky-950/60 to-slate-950">
+      <section className="border-b border-slate-800 bg-gradient-to-b from-red-950/60 to-slate-950">
         <div className="mx-auto max-w-6xl px-4 py-16 text-center">
-          <p className="text-sm font-semibold uppercase tracking-widest text-sky-400">
+          <p className="text-sm font-semibold uppercase tracking-widest text-red-400">
             Latest stable release — v{KODI.version} “{KODI.codename}”
           </p>
           <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold leading-tight text-white sm:text-5xl">
@@ -29,7 +29,7 @@ export default function HomePage() {
               <Link
                 key={v.id}
                 href={downloadUrl(v.id)}
-                className="rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white shadow-lg shadow-sky-500/20 transition hover:bg-sky-400"
+                className="rounded-xl bg-red-500 px-6 py-3 font-semibold text-white shadow-lg shadow-red-500/20 transition hover:bg-red-400"
               >
                 ⬇ Kodi {v.label} — {v.sizeMb} MB
               </Link>
@@ -50,7 +50,7 @@ export default function HomePage() {
               <p className="text-lg font-semibold text-white">{v.label}</p>
               <p className="mt-1 text-sm text-slate-400">{v.fileName}</p>
               <p className="mt-3 text-slate-300">
-                <span className="font-medium text-sky-400">Best for:</span> {v.bestFor}
+                <span className="font-medium text-red-400">Best for:</span> {v.bestFor}
               </p>
               <Link href={downloadUrl(v.id)} className="mt-4 inline-block rounded-lg bg-slate-800 px-4 py-2 font-medium text-white hover:bg-slate-700">
                 Download {v.label} →
@@ -69,7 +69,7 @@ export default function HomePage() {
         <div className="mx-auto max-w-6xl px-4 py-14">
           <div className="flex items-end justify-between">
             <h2 className="text-2xl font-bold text-white">Install guides &amp; help</h2>
-            <Link href="/guides" className="text-sm font-medium text-sky-400 hover:text-sky-300">
+            <Link href="/guides" className="text-sm font-medium text-red-400 hover:text-red-300">
               All guides →
             </Link>
           </div>
@@ -78,9 +78,9 @@ export default function HomePage() {
               <Link
                 key={g.slug}
                 href={`/guides/${g.slug}`}
-                className="group rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-sky-500/50"
+                className="group rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-red-500/50"
               >
-                <h3 className="font-semibold leading-snug text-white group-hover:text-sky-300">{g.title}</h3>
+                <h3 className="font-semibold leading-snug text-white group-hover:text-red-300">{g.title}</h3>
                 <p className="mt-2 line-clamp-3 text-sm text-slate-400">{g.intro}</p>
                 <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-500">
                   {g.readMinutes} min read · Updated {g.updated}

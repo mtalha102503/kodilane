@@ -48,8 +48,8 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       )}
 
       <nav className="text-sm text-slate-500">
-        <Link href="/" className="hover:text-sky-400">Home</Link> {" / "}
-        <Link href="/guides" className="hover:text-sky-400">Guides</Link> {" / "}
+        <Link href="/" className="hover:text-red-400">Home</Link> {" / "}
+        <Link href="/guides" className="hover:text-red-400">Guides</Link> {" / "}
         <span className="text-slate-300">{guide.title}</span>
       </nav>
 
@@ -59,11 +59,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       </p>
       <p className="mt-5 text-lg leading-relaxed text-slate-300">{guide.intro}</p>
 
-      <div className="mt-6 rounded-2xl border border-sky-900 bg-sky-950/40 p-5">
+      <div className="mt-6 rounded-2xl border border-red-900 bg-red-950/40 p-5">
         <p className="font-semibold text-white">Need the Kodi APK first?</p>
         <p className="mt-1 text-sm text-slate-300">
           Download the official Kodi 21.3 Omega APK (32-bit &amp; 64-bit) from our{" "}
-          <Link href="/download" className="font-medium text-sky-400 hover:underline">
+          <Link href="/download" className="font-medium text-red-400 hover:underline">
             download page
           </Link>
           , then come back to this guide.
@@ -102,7 +102,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
 
       <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-6 text-center">
         <p className="font-semibold text-white">Ready to set up Kodi?</p>
-        <Link href="/download" className="mt-3 inline-block rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white hover:bg-sky-400">
+        <Link href="/download" className="mt-3 inline-block rounded-xl bg-red-500 px-6 py-3 font-semibold text-white hover:bg-red-400">
           ⬇ Download Kodi APK
         </Link>
       </div>

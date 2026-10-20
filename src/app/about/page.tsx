@@ -37,16 +37,16 @@ export default function AboutPage() {
           Kodi is free and open-source software (GPL) created by the XBMC Foundation and a global community of
           volunteers. KodiLane is an independent project and is not affiliated with the XBMC Foundation. If Kodi
           helps you, consider supporting its developers at{" "}
-          <a href="https://kodi.tv" target="_blank" rel="noopener noreferrer" className="text-sky-400 hover:underline">
+          <a href="https://kodi.tv" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">
             kodi.tv
           </a>
           .
         </p>
         <p>
           Start with the{" "}
-          <Link href="/download" className="text-sky-400 hover:underline">Kodi APK download</Link>{" "}
+          <Link href="/download" className="text-red-400 hover:underline">Kodi APK download</Link>{" "}
           or the{" "}
-          <Link href="/guides/install-kodi-on-firestick" className="text-sky-400 hover:underline">
+          <Link href="/guides/install-kodi-on-firestick" className="text-red-400 hover:underline">
             Firestick install guide
           </Link>
           .
