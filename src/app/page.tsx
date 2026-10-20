@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { NetMirror, NetMirror_VARIANTS, downloadUrl } from "@/lib/Kodi";
+import { Kodi, Kodi_VARIANTS, downloadUrl } from "@/lib/Kodi";
 import { GUIDES } from "@/lib/guides";
-import { NetMirrorFaqs, softwareSchema, faqSchema } from "@/lib/seo";
+import { KodiFaqs, softwareSchema, faqSchema } from "@/lib/seo";
 
 
 export default function HomePage() {
