@@ -4,18 +4,19 @@ import { GUIDES } from "@/lib/guides";
 import { guidesItemListSchema } from "@/lib/seo";
 
 export const metadata: Metadata = {
-  title: "NetMirror Guides — Install on Firestick, Android & TV, Addons & Fixes",
+  title: "Kodi Guides — Install on Android & Windows, Addons & Fixes",
   description:
-    "Step-by-step NetMirror guides: install NetMirror on Firestick, Android and Android TV, the best legal addons from the official repository, and fixes for common NetMirror problems.",
+    "Step-by-step Kodi guides: install Kodi on Android and Windows, the best legal addons from the official repository, and fixes for common Kodi problems.",
   alternates: { canonical: "/guides" },
 };
 
 export default function GuidesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14">
-      <h1 className="text-3xl font-extrabold text-white">NetMirror Guides</h1>
-      <p className="mt-2 max-w-2xl text-slate-400">
-        Honest, step-by-step help for installing NetMirror and getting the most out of it — official app and legal addons only.
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(guidesItemListSchema()) }} />
+      <h1 className="text-3xl font-extrabold text-slate-900">Kodi Guides</h1>
+      <p className="mt-2 max-w-2xl text-slate-500">
+        Honest, step-by-step help for installing Kodi and getting the most out of it — official app and legal addons only.
       </p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         {GUIDES.map((g) => (

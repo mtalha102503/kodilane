@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description:
-    "Download the official Kodi APK (latest version), install it on Firestick, Android and Android TV with step-by-step guides, and discover the best legal addons from the official Kodi repository.",
+    "Download the official Kodi APK (latest version), install it on Android and Windows with step-by-step guides, and discover the best legal addons from the official Kodi repository.",
   metadataBase: new URL(SITE_URL),
   alternates: { canonical: "/" },
   openGraph: {
@@ -27,13 +27,13 @@ export const metadata: Metadata = {
     url: SITE_URL,
     title: `${SITE_NAME} — Kodi APK Download, Install Guides & Legal Addons`,
     description:
-      "Download the official Kodi APK (latest version), install it on Firestick, Android and Android TV with step-by-step guides, and discover the best legal addons.",
+      "Download the official Kodi APK (latest version), install it on Android and Windows with step-by-step guides, and discover the best legal addons.",
   },
   twitter: {
     card: "summary_large_image",
     title: `${SITE_NAME} — Kodi APK Download & Guides`,
     description:
-      "Official Kodi APK for Android, Firestick & TV — with install guides and legal addons only.",
+      "Official Kodi for Android & Windows — with install guides and legal addons only.",
   },
   manifest: "/manifest.webmanifest",
   robots: {
@@ -51,22 +51,22 @@ function Footer() {
           <p className="text-lg font-bold text-slate-900">
             📺 Kodi<span className="text-red-600">Lane</span>
           </p>
-          <p className="mt-2">{SITE_TAGLINE}. The official Kodi APK, honest install guides and legal addons — nothing else.</p>
+          <p className="mt-2">{SITE_TAGLINE}. The official Kodi for Android & Windows, honest install guides and legal addons — nothing else.</p>
         </div>
         <div>
           <p className="font-semibold text-slate-900">Download</p>
           <ul className="mt-2 space-y-1">
-            <li><Link href="/download" className="hover:text-red-600">Kodi APK Download</Link></li>
-            <li><Link href="/download?variant=arm-v7a" className="hover:text-red-600">Kodi 32-bit (Firestick)</Link></li>
-            <li><Link href="/download?variant=arm64-v8a" className="hover:text-red-600">Kodi 64-bit</Link></li>
+            <li><Link href="/download" className="hover:text-red-600">Kodi Download</Link></li>
+            <li><Link href="/download?build=android-32" className="hover:text-red-600">Kodi Android 32-bit</Link></li>
+            <li><Link href="/download?build=android-64" className="hover:text-red-600">Kodi Android 64-bit</Link></li>
+            <li><Link href="/download?build=windows-64" className="hover:text-red-600">Kodi for Windows</Link></li>
           </ul>
         </div>
         <div>
           <p className="font-semibold text-slate-900">Guides</p>
           <ul className="mt-2 space-y-1">
-            <li><Link href="/guides/install-kodi-on-firestick" className="hover:text-red-600">Kodi on Firestick</Link></li>
+            <li><Link href="/guides/install-kodi-on-windows" className="hover:text-red-600">Kodi on Windows</Link></li>
             <li><Link href="/guides/install-kodi-on-android" className="hover:text-red-600">Kodi on Android</Link></li>
-            <li><Link href="/guides/install-kodi-on-android-tv" className="hover:text-red-600">Kodi on Android TV</Link></li>
             <li><Link href="/guides/best-legal-kodi-addons" className="hover:text-red-600">Best Legal Addons</Link></li>
             <li><Link href="/guides/kodi-not-working-fixes" className="hover:text-red-600">Kodi Not Working Fixes</Link></li>
           </ul>

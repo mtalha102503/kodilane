@@ -53,7 +53,7 @@ export default function DownloadClient() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14">
       <h1 className="text-center text-3xl font-extrabold text-slate-900">
-        Download Kodi {KODI.version} “{KODI.codename}” APK
+        Download Kodi {KODI.version} “{KODI.codename}” {variant.platform === "Windows" ? "for Windows" : "APK"}
       </h1>
       <p className="mt-2 text-center text-slate-500">
         Official release by the {KODI.developer} · {KODI.license} · Android {KODI.minAndroid}+
@@ -110,28 +110,22 @@ export default function DownloadClient() {
         <h2 className="font-semibold text-slate-900">Now install it</h2>
         <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
           <li>
-            Firestick / Fire TV —{" "}
-            <Link href="/guides/install-netmirror-on-firestick" className="text-red-600 hover:underline">
-              step-by-step Firestick guide
+            Windows PC —{" "}
+            <Link href="/guides/install-kodi-on-windows" className="text-red-600 hover:underline">
+              step-by-step Windows guide
             </Link>
           </li>
           <li>
             Android phone or tablet —{" "}
-            <Link href="/guides/install-netmirror-on-android" className="text-red-600 hover:underline">
+            <Link href="/guides/install-kodi-on-android" className="text-red-600 hover:underline">
               Android install guide
-            </Link>
-          </li>
-          <li>
-            Android TV / Google TV / Shield —{" "}
-            <Link href="/guides/install-netmirror-on-android-tv" className="text-red-600 hover:underline">
-              Android TV guide
             </Link>
           </li>
         </ul>
         <p className="mt-4 text-sm text-slate-500">
           Prefer the source? The same file is available from the{" "}
           <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">
-            official NetMirror website
+            official Kodi website
           </a>
           .
         </p>

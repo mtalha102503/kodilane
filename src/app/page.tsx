@@ -20,7 +20,7 @@ export default function HomePage() {
             Latest stable release — v{KODI.version} “{KODI.codename}”
           </p>
           <h1 className="mx-auto mt-3 max-w-3xl text-4xl font-extrabold leading-tight text-slate-900 sm:text-5xl">
-            Download Kodi APK for Android, Firestick &amp; TV
+            Download Kodi for Android &amp; Windows
           </h1>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-slate-600">
             The official, unmodified Kodi APK — free and open-source by the XBMC Foundation.
@@ -45,7 +45,7 @@ export default function HomePage() {
 
       {/* WHICH BUILD */}
       <section className="mx-auto max-w-6xl px-4 py-14">
-        <h2 className="text-2xl font-bold text-slate-900">Which Kodi build do you need?</h2>
+        <h2 className="text-2xl font-bold text-slate-900">Which Kodi do you need?</h2>
         <div className="mt-6 grid gap-4 md:grid-cols-2">
           {KODI_VARIANTS.map((v) => (
             <div key={v.id} className="rounded-2xl border border-slate-200 bg-white p-6">
@@ -61,7 +61,7 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-4 text-sm text-slate-500">
-          Not sure? Firestick = always 32-bit. Newer phones and Nvidia Shield = 64-bit. Picking the wrong one is harmless —
+          Not sure? Older Android devices = 32-bit, newer phones = 64-bit, Windows PC = the .exe installer. Picking the wrong one is harmless —
           Android simply says “App not installed” and you install the other file.
         </p>
       </section>
@@ -117,7 +117,7 @@ export default function HomePage() {
             <p className="text-3xl">📖</p>
             <h3 className="mt-2 font-semibold text-slate-900">Guides that finish the job</h3>
             <p className="mt-1 text-sm text-slate-500">
-              Every device covered: Firestick, Android phones, Android TV, Shield — plus fixes for buffering, crashing
+              Both platforms covered: Android phones and tablets, and Windows PCs — plus fixes for buffering, crashing
               and black screens.
             </p>
           </div>

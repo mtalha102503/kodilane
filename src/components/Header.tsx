@@ -6,7 +6,7 @@ import Link from "next/link";
 const LINKS = [
   { href: "/download", label: "Download" },
   { href: "/guides", label: "Guides" },
-  { href: "/guides/install-kodi-on-firestick", label: "Firestick" },
+  { href: "/guides/install-kodi-on-windows", label: "Windows" },
   { href: "/guides/best-legal-kodi-addons", label: "Addons" },
   { href: "/about", label: "About" },
 ];

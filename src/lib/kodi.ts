@@ -1,49 +1,67 @@
-// Real data — verified from the official Kodi mirrors (mirrors.kodi.tv) on 2026-10-20.
-// Kodi is free & open-source (GPL) software by the XBMC Foundation, which
-// officially distributes its APK outside the Play Store from kodi.tv.
+import { R2_PUBLIC_URL } from "./constants";
+
+export const KODI = {
+  name: "Kodi",
+  version: "21.3",
+  codename: "Omega",
+  tagline: "The free, open-source media center",
+  developer: "XBMC Foundation",
+  license: "GPL (open source)",
+  updated: "December 2025",
+};
 
 export interface KodiVariant {
   id: string;
   label: string;
+  platform: "Android" | "Windows";
   arch: string;
   fileName: string;
-  sizeMb: number;
-  bestFor: string;
-  r2Url: string;
+  sizeBytes: number;
+  size: string;
+  blurb: string;
 }
-
-export const KODI = {
-  name: "NetMirror",
-  version: "21.3",
-  codename: "Omega",
-  license: "Free & Open Source (GPL)",
-  developer: "XBMC Foundation",
-  minAndroid: "5.0",
-  updated: "December 2025",
-  rating: "4.4",
-};
 
 export const KODI_VARIANTS: KodiVariant[] = [
   {
-    id: "arm-v7a",
-    label: "32-bit (ARMV7A)",
-    arch: "armeabi-v7a",
-    fileName: "NetMirror.apk",
-    sizeMb: 64.7,
-    bestFor: "Amazon Firestick & Fire TV, older Android phones and TV boxes",
-    r2Url: `https://pub-fc55ef31a12344c4ac7e57a1e48178bc.r2.dev/NetMirror.apk`,
+    id: "android-64",
+    label: "Android 64-bit",
+    platform: "Android",
+    arch: "ARM64 (arm64-v8a)",
+    fileName: "kodi-21.3-Omega-arm64-v8a.apk",
+    sizeBytes: 68167494,
+    size: "65.0 MB",
+    blurb: "For most modern Android phones and tablets (2018 or newer). This is the one most people need.",
   },
   {
-    id: "arm64-v8a",
-    label: "64-bit (ARM64)",
-    arch: "arm64-v8a",
-    fileName: "NetMirror.apk",
-    sizeMb: 65.0,
-    bestFor: "Newer Android phones, Nvidia Shield, modern Android TV devices",
-    r2Url: `https://pub-fc55ef31a12344c4ac7e57a1e48178bc.r2.dev/NetMirror.apk`,
+    id: "android-32",
+    label: "Android 32-bit",
+    platform: "Android",
+    arch: "ARM (armeabi-v7a)",
+    fileName: "kodi-21.3-Omega-armeabi-v7a.apk",
+    sizeBytes: 67832726,
+    size: "64.7 MB",
+    blurb: "For older Android phones, tablets and budget devices with a 32-bit processor.",
+  },
+  {
+    id: "windows-64",
+    label: "Windows 64-bit",
+    platform: "Windows",
+    arch: "Windows 10 / 11 (64-bit PC)",
+    fileName: "kodi-21.3-Omega-x64.exe",
+    sizeBytes: 77567958,
+    size: "74.0 MB",
+    blurb: "For Windows PCs and laptops — the standard .exe installer from the official Kodi mirrors.",
   },
 ];
 
-export function downloadUrl(variantId: string): string {
-  return `/download?variant=${variantId}`;
+export function variantById(id: string | null | undefined): KodiVariant {
+  return KODI_VARIANTS.find((v) => v.id === id) ?? KODI_VARIANTS[0];
+}
+
+export function downloadUrl(id: string): string {
+  return `/download?build=${id}`;
+}
+
+export function apkUrl(variant: KodiVariant): string {
+  return `${R2_PUBLIC_URL}/${variant.fileName}`;
 }

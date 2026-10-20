@@ -9,34 +9,34 @@ export function downloadTitle(): string {
 }
 
 export function downloadMeta(): string {
-  return `Download Kodi APK v${KODI.version} ${KODI.codename} for Android, Firestick & Android TV — official, free and open-source. 32-bit and 64-bit builds, safe direct download.`;
+  return `Download Kodi v${KODI.version} ${KODI.codename} for Android & Windows — official, free and open-source. Android APKs (32-bit & 64-bit) and the Windows 64-bit installer, safe direct download.`;
 }
 
 export function kodiFaqs(): { q: string; a: string }[] {
   return [
     {
-      q: "Is NetMirror free?",
-      a: "Yes. NetMirror is completely free and open-source software released under the GPL by the XBMC Foundation. There is no subscription and no premium version.",
+      q: "Is Kodi free?",
+      a: "Yes. Kodi is completely free and open-source software released under the GPL by the XBMC Foundation. There is no subscription and no premium version.",
     },
     {
-      q: "Is NetMirror legal?",
-      a: "Yes. NetMirror is a legal media player. Installing it on your own Android device, Firestick or TV is completely legal. NetMirrorLane only covers the official app and addons from the official NetMirror repository.",
+      q: "Is Kodi legal?",
+      a: "Yes. Kodi is a legal media player. Installing it on your own Android device or Windows PC is completely legal. KodiLane only covers the official app and addons from the official Kodi repository.",
     },
     {
-      q: `What is the latest version of NetMirror?`,
-      a: `The latest stable version is NetMirror ${KODI.version} "${KODI.codename}". A newer NetMirror 22 "Piers" release is still in testing (release-candidate stage).`,
+      q: `What is the latest version of Kodi?`,
+      a: `The latest stable version is Kodi ${KODI.version} "${KODI.codename}". A newer Kodi 22 "Piers" release is still in testing (release-candidate stage).`,
     },
     {
-      q: "Should I download the 32-bit or 64-bit NetMirror APK?",
-      a: "Firestick and older devices need the 32-bit (ARMV7A) build. Newer phones, Nvidia Shield and modern Android TVs run the 64-bit (ARM64) build. If one fails with 'App not installed', use the other.",
+      q: "Should I download the 32-bit or 64-bit Kodi APK?",
+      a: "Older Android devices need the 32-bit (armeabi-v7a) build; newer phones (2018 or later) run the 64-bit (arm64-v8a) build. On Windows, use the 64-bit .exe installer. If an Android build fails with 'App not installed', use the other one.",
     },
     {
-      q: "Is the NetMirror APK on NetMirrorLane the official file?",
-      a: "Yes. KodiLane hosts the unmodified official release published by the XBMC Foundation on the NetMirror mirrors — no mods, no bundled extras.",
+      q: "Is the Kodi APK on KodiLane the official file?",
+      a: "Yes. KodiLane hosts the unmodified official release published by the XBMC Foundation on the Kodi mirrors — no mods, no bundled extras.",
     },
     {
-      q: "Does NetMirror work on Firestick?",
-      a: "Yes. NetMirror runs on all Firestick and Fire TV models. Because Amazon does not list NetMirror in its Appstore, you install the APK with the free Downloader app — our Firestick guide walks through it in about 5 minutes.",
+      q: "Does Kodi work on Windows?",
+      a: "Yes. Kodi 21.3 runs on Windows 10 and 11 (64-bit). Download the .exe installer from this site and follow our Windows guide — setup takes about five minutes and no Microsoft Store account is needed.",
     },
   ];
 }
@@ -46,7 +46,7 @@ export function softwareSchema() {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "Kodi",
-    operatingSystem: "Android",
+    operatingSystem: "Android, Windows",
     applicationCategory: "MultimediaApplication",
     softwareVersion: KODI.version,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
@@ -87,7 +87,7 @@ export function websiteSchema() {
     name: SITE_NAME,
     url: SITE_URL,
     description:
-      "Download the official NetMirror APK and follow step-by-step install guides for Firestick, Android and Android TV. Legal addons only.",
+      "Download the official Kodi and follow step-by-step install guides for Android and Windows. Legal addons only.",
     publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
   };
 }
@@ -119,7 +119,7 @@ export function guidesItemListSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "NetMirror Guides",
+    name: "Kodi Guides",
     itemListElement: GUIDES_SEO.map((g, i) => ({
       "@type": "ListItem",
       position: i + 1,
