@@ -9,12 +9,7 @@ export const metadata: Metadata = {
 
 export default function DMCAPage() {
   return (
-    <div className="min-h-screen bg-slate-900 text-white">
-      <nav className="border-b border-slate-700 px-6 py-4">
-        <div className="mx-auto max-w-6xl">
-          <Link href="/" className="text-2xl font-bold">🛣️ <span className="text-green-400">APK</span>Lane</Link>
-        </div>
-      </nav>
+    <div className="text-white">
       <main className="mx-auto max-w-3xl px-6 py-12">
         <h1 className="text-4xl font-bold mb-8">DMCA Policy</h1>
         <div className="space-y-6 text-slate-300">
