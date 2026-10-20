@@ -52,10 +52,10 @@ export default function DownloadClient() {
 
   return (
     <div className="mx-auto max-w-3xl px-4 py-14">
-      <h1 className="text-center text-3xl font-extrabold text-white">
+      <h1 className="text-center text-3xl font-extrabold text-slate-900">
         Download Kodi {KODI.version} “{KODI.codename}” APK
       </h1>
-      <p className="mt-2 text-center text-slate-400">
+      <p className="mt-2 text-center text-slate-500">
         Official release by the {KODI.developer} · {KODI.license} · Android {KODI.minAndroid}+
       </p>
 
@@ -67,12 +67,12 @@ export default function DownloadClient() {
             onClick={() => setVariantId(v.id)}
             className={`rounded-2xl border p-5 text-left transition ${
               v.id === variantId
-                ? "border-red-400 bg-red-950/40"
-                : "border-slate-800 bg-slate-900 hover:border-slate-600"
+                ? "border-red-400 bg-red-50"
+                : "border-slate-200 bg-white hover:border-slate-400"
             }`}
           >
-            <p className="font-semibold text-white">{v.label}</p>
-            <p className="mt-1 text-sm text-slate-400">{v.bestFor}</p>
+            <p className="font-semibold text-slate-900">{v.label}</p>
+            <p className="mt-1 text-sm text-slate-500">{v.bestFor}</p>
             <p className="mt-2 text-xs text-slate-500">
               {v.fileName} · {v.sizeMb} MB
             </p>
@@ -81,23 +81,23 @@ export default function DownloadClient() {
       </div>
 
       {/* Countdown / status */}
-      <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-900 p-8 text-center">
+      <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-8 text-center">
         {!started ? (
           <>
-            <p className="text-slate-300">
-              Your download of <span className="font-semibold text-white">{variant.fileName}</span> starts in
+            <p className="text-slate-600">
+              Your download of <span className="font-semibold text-slate-900">{variant.fileName}</span> starts in
             </p>
-            <p className="my-4 text-6xl font-extrabold text-red-400">{seconds}</p>
+            <p className="my-4 text-6xl font-extrabold text-red-600">{seconds}</p>
             <p className="text-sm text-slate-500">Please wait — do not close this page.</p>
             {/* AD SPOT: Adsterra banner mounts here */}
           </>
         ) : (
           <>
             <p className="text-4xl">✅</p>
-            <p className="mt-2 font-semibold text-white">Download started!</p>
-            <p className="mt-1 text-sm text-slate-400">
+            <p className="mt-2 font-semibold text-slate-900">Download started!</p>
+            <p className="mt-1 text-sm text-slate-500">
               Didn’t start?{" "}
-              <button onClick={beginDownload} className="font-medium text-red-400 underline">
+              <button onClick={beginDownload} className="font-medium text-red-600 underline">
                 Click here to retry
               </button>
             </p>
@@ -106,31 +106,31 @@ export default function DownloadClient() {
       </div>
 
       {/* After-download help */}
-      <div className="mt-8 rounded-2xl border border-slate-800 bg-slate-900 p-6">
-        <h2 className="font-semibold text-white">Now install it</h2>
-        <ul className="mt-2 list-inside list-disc space-y-1 text-slate-300">
+      <div className="mt-8 rounded-2xl border border-slate-200 bg-white p-6">
+        <h2 className="font-semibold text-slate-900">Now install it</h2>
+        <ul className="mt-2 list-inside list-disc space-y-1 text-slate-600">
           <li>
             Firestick / Fire TV —{" "}
-            <Link href="/guides/install-kodi-on-firestick" className="text-red-400 hover:underline">
+            <Link href="/guides/install-kodi-on-firestick" className="text-red-600 hover:underline">
               step-by-step Firestick guide
             </Link>
           </li>
           <li>
             Android phone or tablet —{" "}
-            <Link href="/guides/install-kodi-on-android" className="text-red-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android" className="text-red-600 hover:underline">
               Android install guide
             </Link>
           </li>
           <li>
             Android TV / Google TV / Shield —{" "}
-            <Link href="/guides/install-kodi-on-android-tv" className="text-red-400 hover:underline">
+            <Link href="/guides/install-kodi-on-android-tv" className="text-red-600 hover:underline">
               Android TV guide
             </Link>
           </li>
         </ul>
         <p className="mt-4 text-sm text-slate-500">
           Prefer the source? The same file is available from the{" "}
-          <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">
+          <a href={KODI_OFFICIAL_DOWNLOAD} target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">
             official Kodi website
           </a>
           .

@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 export default function AboutPage() {
   return (
     <div className="mx-auto max-w-3xl px-4 py-14">
-      <h1 className="text-3xl font-extrabold text-white">About KodiLane</h1>
-      <div className="mt-6 space-y-4 leading-relaxed text-slate-300">
+      <h1 className="text-3xl font-extrabold text-slate-900">About KodiLane</h1>
+      <div className="mt-6 space-y-4 leading-relaxed text-slate-600">
         <p>
           KodiLane exists for one simple reason: getting Kodi onto a Firestick, phone or TV box is harder than it
           should be. Amazon doesn&apos;t list Kodi in its Appstore, download sites bury the official file under fake
@@ -21,15 +21,15 @@ export default function AboutPage() {
         <p>We do the opposite:</p>
         <ul className="list-inside list-disc space-y-2">
           <li>
-            <strong className="text-white">The official file, untouched</strong> — we host the exact APK published by
+            <strong className="text-slate-900">The official file, untouched</strong> — we host the exact APK published by
             the XBMC Foundation on the Kodi mirrors. No mods, no extras.
           </li>
           <li>
-            <strong className="text-white">Legal addons only</strong> — every guide covers addons from the official
+            <strong className="text-slate-900">Legal addons only</strong> — every guide covers addons from the official
             Kodi repository and licensed services.
           </li>
           <li>
-            <strong className="text-white">Guides that finish the job</strong> — install steps, the right 32-bit vs
+            <strong className="text-slate-900">Guides that finish the job</strong> — install steps, the right 32-bit vs
             64-bit choice, and fixes for the problems people actually hit.
           </li>
         </ul>
@@ -37,16 +37,16 @@ export default function AboutPage() {
           Kodi is free and open-source software (GPL) created by the XBMC Foundation and a global community of
           volunteers. KodiLane is an independent project and is not affiliated with the XBMC Foundation. If Kodi
           helps you, consider supporting its developers at{" "}
-          <a href="https://kodi.tv" target="_blank" rel="noopener noreferrer" className="text-red-400 hover:underline">
+          <a href="https://kodi.tv" target="_blank" rel="noopener noreferrer" className="text-red-600 hover:underline">
             kodi.tv
           </a>
           .
         </p>
         <p>
           Start with the{" "}
-          <Link href="/download" className="text-red-400 hover:underline">Kodi APK download</Link>{" "}
+          <Link href="/download" className="text-red-600 hover:underline">Kodi APK download</Link>{" "}
           or the{" "}
-          <Link href="/guides/install-kodi-on-firestick" className="text-red-400 hover:underline">
+          <Link href="/guides/install-kodi-on-firestick" className="text-red-600 hover:underline">
             Firestick install guide
           </Link>
           .

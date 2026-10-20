@@ -12,8 +12,8 @@ export const metadata: Metadata = {
 export default function GuidesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-14">
-      <h1 className="text-3xl font-extrabold text-white">Kodi Guides</h1>
-      <p className="mt-2 max-w-2xl text-slate-400">
+      <h1 className="text-3xl font-extrabold text-slate-900">Kodi Guides</h1>
+      <p className="mt-2 max-w-2xl text-slate-500">
         Honest, step-by-step help for installing Kodi and getting the most out of it — official app and legal addons only.
       </p>
       <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -21,10 +21,10 @@ export default function GuidesPage() {
           <Link
             key={g.slug}
             href={`/guides/${g.slug}`}
-            className="group rounded-2xl border border-slate-800 bg-slate-900 p-5 transition hover:border-red-500/50"
+            className="group rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-red-400"
           >
-            <h2 className="font-semibold leading-snug text-white group-hover:text-red-300">{g.title}</h2>
-            <p className="mt-2 line-clamp-3 text-sm text-slate-400">{g.intro}</p>
+            <h2 className="font-semibold leading-snug text-slate-900 group-hover:text-red-700">{g.title}</h2>
+            <p className="mt-2 line-clamp-3 text-sm text-slate-500">{g.intro}</p>
             <p className="mt-3 text-xs font-medium uppercase tracking-wide text-slate-500">
               {g.readMinutes} min read · Updated {g.updated}
             </p>

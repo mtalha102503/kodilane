@@ -13,7 +13,7 @@ export default function DownloadPage() {
   return (
     <Suspense
       fallback={
-        <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-400">Preparing your download…</div>
+        <div className="mx-auto max-w-3xl px-4 py-20 text-center text-slate-500">Preparing your download…</div>
       }
     >
       <DownloadClient />

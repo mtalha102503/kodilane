@@ -9,19 +9,19 @@ export const metadata: Metadata = {
 
 export default function PrivacyPage() {
   return (
-    <div className="text-white">
+    <div className="text-slate-900">
       <main className="mx-auto max-w-3xl px-6 py-12">
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
-        <div className="space-y-6 text-slate-300">
+        <div className="space-y-6 text-slate-600">
           <p>Last updated: October 2026</p>
           <p>KodiLane respects your privacy. We collect minimal data necessary to operate the service.</p>
-          <h2 className="text-xl font-semibold text-white">Data We Collect</h2>
+          <h2 className="text-xl font-semibold text-slate-900">Data We Collect</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>Download counts (anonymized)</li>
             <li>Basic analytics (page views)</li>
             <li>Contact info you provide via forms</li>
           </ul>
-          <h2 className="text-xl font-semibold text-white">Data We Don&apos;t Collect</h2>
+          <h2 className="text-xl font-semibold text-slate-900">Data We Don&apos;t Collect</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>We don&apos;t track you across websites</li>
             <li>We don&apos;t sell your data</li>
