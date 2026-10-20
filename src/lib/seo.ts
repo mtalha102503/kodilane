@@ -1,42 +1,42 @@
-// Auto-SEO engine for KodiLane — pages build their metadata + schema from data.
+// Auto-SEO engine for NetMirrorLane — pages build their metadata + schema from data.
 import { SITE_URL, SITE_NAME } from "./constants";
-import { KODI } from "./kodi";
+import { NetMirror } from "./NetMirror";
 import type { Guide } from "./guides";
 import { GUIDES as GUIDES_SEO } from "./guides";
 
 export function downloadTitle(): string {
-  return `Kodi APK Download (v${KODI.version} ${KODI.codename}) — Latest Version | ${SITE_NAME}`;
+  return `NetMirror APK Download (v${NetMirror.version} ${NetMirror.codename}) — Latest Version | ${SITE_NAME}`;
 }
 
 export function downloadMeta(): string {
-  return `Download Kodi APK v${KODI.version} ${KODI.codename} for Android, Firestick & Android TV — official, free and open-source. 32-bit and 64-bit builds, safe direct download.`;
+  return `Download NetMirror APK v${NetMirror.version} ${NetMirror.codename} for Android, Firestick & Android TV — official, free and open-source. 32-bit and 64-bit builds, safe direct download.`;
 }
 
-export function kodiFaqs(): { q: string; a: string }[] {
+export function NetMirrorFaqs(): { q: string; a: string }[] {
   return [
     {
-      q: "Is Kodi free?",
-      a: "Yes. Kodi is completely free and open-source software released under the GPL by the XBMC Foundation. There is no subscription and no premium version.",
+      q: "Is NetMirror free?",
+      a: "Yes. NetMirror is completely free and open-source software released under the GPL by the XBMC Foundation. There is no subscription and no premium version.",
     },
     {
-      q: "Is Kodi legal?",
-      a: "Yes. Kodi is a legal media player. Installing it on your own Android device, Firestick or TV is completely legal. KodiLane only covers the official app and addons from the official Kodi repository.",
+      q: "Is NetMirror legal?",
+      a: "Yes. NetMirror is a legal media player. Installing it on your own Android device, Firestick or TV is completely legal. NetMirrorLane only covers the official app and addons from the official NetMirror repository.",
     },
     {
-      q: `What is the latest version of Kodi?`,
-      a: `The latest stable version is Kodi ${KODI.version} "${KODI.codename}". A newer Kodi 22 "Piers" release is still in testing (release-candidate stage).`,
+      q: `What is the latest version of NetMirror?`,
+      a: `The latest stable version is NetMirror ${NetMirror.version} "${NetMirror.codename}". A newer NetMirror 22 "Piers" release is still in testing (release-candidate stage).`,
     },
     {
-      q: "Should I download the 32-bit or 64-bit Kodi APK?",
+      q: "Should I download the 32-bit or 64-bit NetMirror APK?",
       a: "Firestick and older devices need the 32-bit (ARMV7A) build. Newer phones, Nvidia Shield and modern Android TVs run the 64-bit (ARM64) build. If one fails with 'App not installed', use the other.",
     },
     {
-      q: "Is the Kodi APK on KodiLane the official file?",
-      a: "Yes. KodiLane hosts the unmodified official release published by the XBMC Foundation on the Kodi mirrors — no mods, no bundled extras.",
+      q: "Is the NetMirror APK on NetMirrorLane the official file?",
+      a: "Yes. NetMirrorLane hosts the unmodified official release published by the XBMC Foundation on the NetMirror mirrors — no mods, no bundled extras.",
     },
     {
-      q: "Does Kodi work on Firestick?",
-      a: "Yes. Kodi runs on all Firestick and Fire TV models. Because Amazon does not list Kodi in its Appstore, you install the APK with the free Downloader app — our Firestick guide walks through it in about 5 minutes.",
+      q: "Does NetMirror work on Firestick?",
+      a: "Yes. NetMirror runs on all Firestick and Fire TV models. Because Amazon does not list NetMirror in its Appstore, you install the APK with the free Downloader app — our Firestick guide walks through it in about 5 minutes.",
     },
   ];
 }
@@ -45,10 +45,10 @@ export function softwareSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "Kodi",
+    name: "NetMirror",
     operatingSystem: "Android",
     applicationCategory: "MultimediaApplication",
-    softwareVersion: KODI.version,
+    softwareVersion: NetMirror.version,
     offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
     aggregateRating: undefined,
     author: { "@type": "Organization", name: "XBMC Foundation" },

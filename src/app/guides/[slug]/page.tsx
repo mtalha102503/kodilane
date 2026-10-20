@@ -62,11 +62,11 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       </p>
       <p className="mt-5 text-lg leading-relaxed text-slate-600">{guide.intro}</p>
 
-      <div className="mt-6 rounded-2xl border border-red-200 bg-red-50 p-5">
-        <p className="font-semibold text-slate-900">Need the Kodi APK first?</p>
-        <p className="mt-1 text-sm text-slate-600">
-          Download the official Kodi 21.3 Omega APK (32-bit &amp; 64-bit) from our{" "}
-          <Link href="/download" className="font-medium text-red-600 hover:underline">
+      <div className="mt-6 rounded-2xl border border-sky-900 bg-sky-950/40 p-5">
+        <p className="font-semibold text-white">Need the NetMirror APK first?</p>
+        <p className="mt-1 text-sm text-slate-300">
+          Download the official NetMirror 21.3 Omega APK (32-bit &amp; 64-bit) from our{" "}
+          <Link href="/download" className="font-medium text-sky-400 hover:underline">
             download page
           </Link>
           , then come back to this guide.
@@ -103,10 +103,17 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
         </section>
       )}
 
+<<<<<<< HEAD
+      <div className="mt-12 rounded-2xl border border-slate-800 bg-slate-900 p-6 text-center">
+        <p className="font-semibold text-white">Ready to set up NetMirror?</p>
+        <Link href="/download" className="mt-3 inline-block rounded-xl bg-sky-500 px-6 py-3 font-semibold text-white hover:bg-sky-400">
+          ⬇ Download NetMirror APK
+=======
       <div className="mt-12 rounded-2xl border border-slate-200 bg-white p-6 text-center">
         <p className="font-semibold text-slate-900">Ready to set up Kodi?</p>
         <Link href="/download" className="mt-3 inline-block rounded-xl bg-red-500 px-6 py-3 font-semibold text-white hover:bg-red-400">
           ⬇ Download Kodi APK
+>>>>>>> 57e26861544210bb3e8b61f39bd44d1cfb6ad6ab
         </Link>
       </div>
     </article>

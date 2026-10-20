@@ -3,8 +3,7 @@ import Link from "next/link";
 import { SITE_URL } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy | KodiLane",
-  description: "How KodiLane handles your data: what we collect (almost nothing), what we never collect, cookies, and your rights. Read the KodiLane privacy policy.",
+  title: "Privacy Policy | NetMirrorLane",
   alternates: { canonical: `${SITE_URL}/privacy` },
 };
 
@@ -15,8 +14,8 @@ export default function PrivacyPage() {
         <h1 className="text-4xl font-bold mb-8">Privacy Policy</h1>
         <div className="space-y-6 text-slate-600">
           <p>Last updated: October 2026</p>
-          <p>KodiLane respects your privacy. We collect minimal data necessary to operate the service.</p>
-          <h2 className="text-xl font-semibold text-slate-900">Data We Collect</h2>
+          <p>NetMirrorLane respects your privacy. We collect minimal data necessary to operate the service.</p>
+          <h2 className="text-xl font-semibold text-white">Data We Collect</h2>
           <ul className="list-disc list-inside space-y-2">
             <li>Download counts (anonymized)</li>
             <li>Basic analytics (page views)</li>
@@ -28,7 +27,7 @@ export default function PrivacyPage() {
             <li>We don&apos;t sell your data</li>
             <li>We don&apos;t require accounts to download</li>
           </ul>
-          <p>Contact: contact@kodilane.com</p>
+          <p>Contact: contact@NetMirrorlane.com</p>
         </div>
       </main>
     </div>
